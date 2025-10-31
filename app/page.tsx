@@ -7,7 +7,7 @@ export default function CodeverseBoot() {
   const router = useRouter();
 
   const handleEnterSystem = () => {
-    router.push("/round1"); // 👈 redirect to Round 1
+    router.push("/leaderboard"); // 👈 redirect to Round 1
   };
 
   const styles = {

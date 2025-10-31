@@ -1,0 +1,152 @@
+/* theme-win95.css - Windows 95 Era (4-7 bugs) */
+
+.theme-win95 {
+    background: #008080;
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .theme-win95 .leaderboard-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    padding: 3px;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+  }
+  
+  .theme-win95 .leaderboard-header {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    padding: 3px 8px;
+    margin: -3px -3px 0 -3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .theme-win95 .leaderboard-title {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  
+  .theme-win95 .theme-indicator {
+    font-size: 11px;
+    opacity: 0.9;
+  }
+  
+  .theme-win95 .progress-section {
+    margin: 15px;
+    padding: 10px;
+    background: #ffffff;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+  }
+  
+  .theme-win95 .progress-label {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #000000;
+  }
+  
+  .theme-win95 .progress-bar-container {
+    height: 25px;
+    background: #ffffff;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    position: relative;
+  }
+  
+  .theme-win95 .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+    transition: width 0.3s ease;
+  }
+  
+  .theme-win95 .controls-section {
+    display: flex;
+    gap: 10px;
+    margin: 15px;
+    justify-content: center;
+  }
+  
+  .theme-win95 .control-btn {
+    background: #c0c0c0;
+    color: #000000;
+    border: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    padding: 8px 16px;
+    font-family: 'MS Sans Serif', Arial, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    min-width: 80px;
+  }
+  
+  .theme-win95 .control-btn:active:not(:disabled) {
+    border-color: #000000 #ffffff #ffffff #000000;
+    padding: 9px 15px 7px 17px;
+  }
+  
+  .theme-win95 .control-btn:disabled {
+    color: #808080;
+    text-shadow: 1px 1px 0px #ffffff;
+    cursor: not-allowed;
+  }
+  
+  .theme-win95 .leaderboard-table {
+    margin: 15px;
+    background: #ffffff;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+  }
+  
+  .theme-win95 .table-header {
+    display: grid;
+    grid-template-columns: 80px 1fr 150px;
+    background: #c0c0c0;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+  }
+  
+  .theme-win95 .table-body {
+    background: #ffffff;
+  }
+  
+  .theme-win95 .table-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 150px;
+    padding: 8px;
+    border-bottom: 1px solid #c0c0c0;
+    font-size: 12px;
+    color: #000000;
+  }
+  
+  .theme-win95 .table-row:last-child {
+    border-bottom: none;
+  }
+  
+  .theme-win95 .table-row:hover {
+    background: #000080;
+    color: #ffffff;
+  }
+  
+  .theme-win95 .footer-text {
+    text-align: center;
+    margin: 15px;
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .theme-win95 .col-rank,
+  .theme-win95 .col-name,
+  .theme-win95 .col-score {
+    display: flex;
+    align-items: center;
+  }

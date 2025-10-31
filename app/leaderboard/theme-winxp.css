@@ -1,0 +1,170 @@
+/* theme-winxp.css - Windows XP Era (8-11 bugs) */
+
+.theme-winxp {
+    background: linear-gradient(180deg, #245EDC 0%, #3F8CF3 50%, #245EDC 100%);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .theme-winxp .leaderboard-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #ffffff 0%, #ECE9D8 100%);
+    border: 1px solid #0054E3;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  
+  .theme-winxp .leaderboard-header {
+    background: linear-gradient(180deg, #0997FF 0%, #0053EE 50%, #0050EE 100%);
+    color: white;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .theme-winxp .leaderboard-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .theme-winxp .theme-indicator {
+    font-size: 12px;
+    opacity: 0.95;
+    font-weight: normal;
+  }
+  
+  .theme-winxp .progress-section {
+    margin: 20px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #ACA899;
+    border-radius: 4px;
+  }
+  
+  .theme-winxp .progress-label {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: 500;
+  }
+  
+  .theme-winxp .progress-bar-container {
+    height: 22px;
+    background: #ffffff;
+    border: 1px solid #003C74;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .theme-winxp .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(180deg, #7FD4FF 0%, #0099FF 50%, #0066CC 100%);
+    transition: width 0.4s ease;
+    position: relative;
+    animation: xp-progress 2s ease-in-out infinite;
+  }
+  
+  @keyframes xp-progress {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.15); }
+  }
+  
+  .theme-winxp .controls-section {
+    display: flex;
+    gap: 12px;
+    margin: 20px;
+    justify-content: center;
+  }
+  
+  .theme-winxp .control-btn {
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECE9D8 100%);
+    color: #000000;
+    border: 1px solid #003C74;
+    border-radius: 3px;
+    padding: 6px 18px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    min-width: 90px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+  }
+  
+  .theme-winxp .control-btn:hover:not(:disabled) {
+    background: linear-gradient(180deg, #FFF4CC 0%, #FFE6A0 100%);
+    border-color: #0054E3;
+  }
+  
+  .theme-winxp .control-btn:active:not(:disabled) {
+    background: linear-gradient(180deg, #E0DED5 0%, #D4D0C8 100%);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .theme-winxp .control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .theme-winxp .leaderboard-table {
+    margin: 20px;
+    background: #ffffff;
+    border: 1px solid #ACA899;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .theme-winxp .table-header {
+    display: grid;
+    grid-template-columns: 80px 1fr 150px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #D4D0C8 100%);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 1px solid #ACA899;
+    color: #003C74;
+  }
+  
+  .theme-winxp .table-body {
+    background: #ffffff;
+  }
+  
+  .theme-winxp .table-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 150px;
+    padding: 10px;
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 13px;
+    color: #000000;
+    transition: all 0.2s;
+  }
+  
+  .theme-winxp .table-row:last-child {
+    border-bottom: none;
+  }
+  
+  .theme-winxp .table-row:hover {
+    background: linear-gradient(90deg, #D4E9FF 0%, #E8F4FF 100%);
+    border-radius: 2px;
+  }
+  
+  .theme-winxp .footer-text {
+    text-align: center;
+    margin: 20px;
+    font-size: 13px;
+    color: #003C74;
+    font-weight: 600;
+  }
+  
+  .theme-winxp .col-rank,
+  .theme-winxp .col-name,
+  .theme-winxp .col-score {
+    display: flex;
+    align-items: center;
+  }
