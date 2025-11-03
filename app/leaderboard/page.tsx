@@ -21,7 +21,7 @@ const LeaderboardEvolution = () => {
     { name: 'Frank', score: 3, bugs: 3 },
   ]);
 
-  const getThemeClass = (bugs) => {
+  const getThemeClass = (bugs : number) => {
     if (bugs < 4) return 'theme-dos';
     if (bugs < 8) return 'theme-win95';
     if (bugs < 12) return 'theme-winxp';
@@ -29,7 +29,7 @@ const LeaderboardEvolution = () => {
     return 'theme-future';
   };
 
-  const getThemeName = (bugs) => {
+  const getThemeName = (bugs : number) => {
     if (bugs < 4) return 'DOS TERMINAL';
     if (bugs < 8) return 'WINDOWS 95';
     if (bugs < 12) return 'WINDOWS XP';
