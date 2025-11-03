@@ -147,11 +147,12 @@ export default function SystemScan() {
           z-index: 2;
           max-width: 1200px;
           width: 100%;
+          text-align: center;
         }
 
         .glitch {
           font-family: 'Orbitron', sans-serif;
-          font-size: 5.5rem;
+          font-size: 8.5rem;
           font-weight: 900;
           text-transform: uppercase;
           position: relative;
@@ -159,6 +160,42 @@ export default function SystemScan() {
           letter-spacing: 0.1em;
           animation: glitch-text 1s infinite;
           text-align: center;
+        }
+
+        .glitch-title {
+          font-family: 'Orbitron', sans-serif !important;
+          font-size: 16rem !important;
+          font-weight: 900 !important;
+          text-transform: uppercase !important;
+          position: relative;
+          color: #fff !important;
+          letter-spacing: 0.1em !important;
+          animation: glitch-text 1s infinite;
+          text-align: center !important;
+        }
+
+        .glitch-title::before,
+        .glitch-title::after {
+          content: attr(data-text);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .glitch-title::before {
+          left: 2px;
+          text-shadow: -2px 0 #FF004D;
+          clip: rect(24px, 550px, 90px, 0);
+          animation: glitch-anim 3s infinite linear alternate-reverse;
+        }
+
+        .glitch-title::after {
+          left: -2px;
+          text-shadow: -2px 0 #00AEEF;
+          clip: rect(85px, 550px, 140px, 0);
+          animation: glitch-anim 2s infinite linear alternate-reverse;
         }
 
         .glitch::before,
@@ -218,7 +255,7 @@ export default function SystemScan() {
         }
 
         .subtitle {
-          font-size: 1.2rem;
+          font-size: 1.6rem;
           color: #00AEEF;
           margin-top: 20px;
           text-shadow: 0 0 10px #00AEEF;
@@ -233,8 +270,8 @@ export default function SystemScan() {
 
         .cta-button {
           margin-top: 40px;
-          padding: 15px 40px;
-          font-size: 1.2rem;
+          padding: 18px 50px;
+          font-size: 1.5rem;
           font-family: 'Orbitron', sans-serif;
           background: transparent;
           color: #00AEEF;
@@ -561,7 +598,20 @@ export default function SystemScan() {
 
         @media (max-width: 768px) {
           .glitch {
-            font-size: 2rem;
+            font-size: 3rem;
+          }
+          
+          .glitch-title {
+            font-size: 5rem !important;
+          }
+          
+          .subtitle {
+            font-size: 1.2rem;
+          }
+          
+          .cta-button {
+            font-size: 1.2rem;
+            padding: 15px 40px;
           }
           
           .heading {
@@ -600,7 +650,7 @@ export default function SystemScan() {
           <div className="content">
             <GlitchText 
               text="SYSTEM SCAN" 
-              className="glitch font-orbitron text-6xl font-black uppercase tracking-wider text-white"
+              className="glitch-title"
             />
             <p className="subtitle">REBOOT PROTOCOL INITIATED</p>
             <p className="subtitle" style={{ fontSize: '1rem', marginTop: '10px' }}>
