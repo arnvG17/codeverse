@@ -10,6 +10,10 @@ export default function CodeverseBoot() {
     router.push("/leaderboard"); // 👈 redirect to Round 1
   };
 
+  const handleSystemScan = () => {
+    router.push("/system-scan"); // 👈 redirect to System Scan
+  };
+
   const styles = {
     container: {
       position: "relative",
@@ -72,6 +76,12 @@ export default function CodeverseBoot() {
         aria-label="Enter the System"
         style={styles.clickZone}
       />
+
+      {/* System Scan button */}
+      
+
+      {/* Test button */}
+      
     </div>
   );
 }
