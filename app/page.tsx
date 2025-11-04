@@ -7,11 +7,16 @@ export default function CodeverseBoot() {
   const router = useRouter();
 
   const handleEnterSystem = () => {
-    router.push("/leaderboard"); // 👈 redirect to Round 1
+    router.push("/system-scan"); // 👈 redirect to Round 1
   };
 
   const handleSystemScan = () => {
     router.push("/system-scan"); // 👈 redirect to System Scan
+  };
+
+  const handleVideoEnd = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget;
+    video.pause();
   };
 
   const styles = {
@@ -62,7 +67,7 @@ export default function CodeverseBoot() {
   return (
     <div style={styles.container}>
       {/* Background video */}
-      <video autoPlay muted loop style={styles.video}>
+      <video autoPlay muted style={styles.video} onEnded={handleVideoEnd}>
         <source src="introvid.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
