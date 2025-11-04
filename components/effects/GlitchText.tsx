@@ -3,13 +3,23 @@ import { motion } from 'framer-motion';
 interface GlitchTextProps {
   text: string;
   className?: string;
+  fontSize?: string;
 }
 
-function GlitchText({ text, className = '' }: GlitchTextProps) {
+function GlitchText({ text, className = '', fontSize = '4rem' }: GlitchTextProps) {
+  const textStyle = {
+    fontSize: fontSize,
+    lineHeight: '1.2',
+    fontWeight: '900',
+    textShadow: '0 0 10px rgba(0, 174, 239, 0.5)',
+  };
+
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className}`} style={textStyle}>
       <motion.div
         className="relative z-10"
+        data-text={text}
+        style={textStyle}
         animate={{
           textShadow: [
             '0 0 0 transparent',
@@ -21,37 +31,6 @@ function GlitchText({ text, className = '' }: GlitchTextProps) {
           duration: 0.3,
           repeat: Infinity,
           repeatDelay: 2,
-        }}
-      >
-        {text}
-      </motion.div>
-
-      <motion.div
-        className="absolute inset-0 text-cyber-blue opacity-70"
-        animate={{
-          x: [0, 2, -2, 0],
-          opacity: [0, 0.7, 0],
-        }}
-        transition={{
-          duration: 0.2,
-          repeat: Infinity,
-          repeatDelay: 3,
-        }}
-      >
-        {text}
-      </motion.div>
-
-      <motion.div
-        className="absolute inset-0 text-cyber-red opacity-70"
-        animate={{
-          x: [0, -2, 2, 0],
-          opacity: [0, 0.7, 0],
-        }}
-        transition={{
-          duration: 0.2,
-          repeat: Infinity,
-          repeatDelay: 3,
-          delay: 0.1,
         }}
       >
         {text}

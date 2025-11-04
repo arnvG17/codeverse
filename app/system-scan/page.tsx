@@ -35,7 +35,7 @@ export default function SystemScan() {
     }
   }, [currentSlide]);
 
-  const scrollToSlide = (index) => {
+  const scrollToSlide = (index: number) => {
     setCurrentSlide(index);
     const element = document.getElementById(`slide-${index}`);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -164,7 +164,7 @@ export default function SystemScan() {
 
         .glitch-title {
           font-family: 'Orbitron', sans-serif !important;
-          font-size: 16rem !important;
+          font-size: 20rem !important;
           font-weight: 900 !important;
           text-transform: uppercase !important;
           position: relative;
@@ -602,7 +602,7 @@ export default function SystemScan() {
           }
           
           .glitch-title {
-            font-size: 5rem !important;
+            font-size: 6rem !important;
           }
           
           .subtitle {
@@ -651,6 +651,7 @@ export default function SystemScan() {
             <GlitchText 
               text="SYSTEM SCAN" 
               className="glitch-title"
+              fontSize="12rem"
             />
             <p className="subtitle">REBOOT PROTOCOL INITIATED</p>
             <p className="subtitle" style={{ fontSize: '1rem', marginTop: '10px' }}>

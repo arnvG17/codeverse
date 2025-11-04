@@ -29,7 +29,8 @@ function Slide1({ onNext }: Slide1Props) {
           </div>
           <GlitchText
             text="SYSTEM SCAN"
-            className="text-7xl md:text-9xl font-orbitron font-bold text-white mb-4"
+            className="font-orbitron text-white mb-4"
+            fontSize="16rem"
           />
           <motion.div
             className="text-2xl md:text-3xl font-mono text-cyber-blue"
